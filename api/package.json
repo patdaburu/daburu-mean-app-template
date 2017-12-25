@@ -1,0 +1,77 @@
+{
+  "name": "daburu-mean-api-template",
+  "version": "1.0.0",
+  "description": "This is the template for the API (\"back-end\") of a MEAN app. ",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "npm run nsp & npm run lint && npm run test && npm run build",
+    "clean": "npm run clean:coverage && npm run clean:dist",
+    "clean:dist": "rm -rf dist",
+    "clean:coverage": "rm -rf coverage && rm -rf .nyc_output",
+    "build": "npm run build:ts && npm run build:doc",
+    "tsc": "./node_modules/typescript/bin/tsc --project .",
+    "build:doc": "./node_modules/typedoc/bin/typedoc --out ./docs ./src",
+    "rebuild": "npm run clean && npm run build",
+    "start": "npm run tsc && node ./dist/index.js",
+    "lint": "./node_modules/tslint/bin/tslint --project .",
+    "nsp": "./node_modules/nsp/bin/nsp check",
+    "test": "nyc mocha -r ts-node/register --recursive './**/*.spec.ts'"
+  },
+  "nyc": {
+    "extension": [
+      ".ts",
+      ".tsx"
+    ],
+    "exclude": [
+      "**/*.d.ts",
+      "**/*.spec.ts",
+      "coverage",
+      "dist",
+      "test",
+      "docs"
+    ],
+    "reporter": [
+      "html",
+      "text"
+    ],
+    "all": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patdaburu/daburu-ts-npm.git"
+  },
+  "keywords": [
+    "mean",
+    "api",
+    "typescript",
+    "node"
+  ],
+  "author": "Pat Daburu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/patdaburu/daburu-ts-npm/issues"
+  },
+  "homepage": "https://github.com/patdaburu/daburu-ts-npm#readme",
+  "devDependencies": {
+    "@types/chai": "^4.0.6",
+    "@types/mocha": "^2.2.44",
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
+    "nyc": "^11.3.0",
+    "source-map-support": "^0.5.0",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.8.0",
+    "tslint-sonarts": "^1.2.0",
+    "typedoc": "^0.9.0",
+    "typescript": "^2.6.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "compression": "^1.7.1",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "helmet": "^3.9.0",
+    "mongoose": "^4.13.7",
+    "morgan": "^1.9.0"
+  }
+}
