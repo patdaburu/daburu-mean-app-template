@@ -1,14 +1,21 @@
 {
   "name": "daburu-mean-ui-template",
   "version": "0.0.0",
+  "description": "This is the template for the UI (\"front-end\") of a MEAN app.",
   "license": "MIT",
   "scripts": {
+    "prepare": "npm run nsp && npm run clean & npm run lint && npm run test && npm run build",
     "ng": "ng",
     "start": "ng serve",
+    "clean": "rm -rf dist",
     "build": "ng build --prod",
-    "test": "ng test",
+    "build:doc": "./node_modules/typedoc/bin/typedoc --module commonjs --out ./docs ./dist",
+    "rebuild": "npm run clean && npm run build",
+    "test": "ng test --watch=false --code-coverage",
+    "test:watch": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "nsp": "./node_modules/nsp/bin/nsp check"
   },
   "private": true,
   "dependencies": {
@@ -41,6 +48,7 @@
     "karma-coverage-istanbul-reporter": "^1.2.1",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "nsp": "^3.1.0",
     "protractor": "~5.1.2",
     "ts-node": "~3.2.0",
     "tslint": "~5.7.0",
