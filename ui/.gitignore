@@ -43,3 +43,5 @@ Thumbs.db
 
 # npm
 package-lock.json
+*.tar.gz
+*.tgz

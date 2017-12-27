@@ -1,0 +1,35 @@
+{
+  "name": "daburu-mean-app-template",
+  "version": "0.0.1",
+  "description": "This is the template a MEAN app that includes a node.js API back-end and an Angular UI front-end.",
+  "main": "index.js",
+  "scripts": {
+    "flightCheck": "npm run prepublishOnly && npm pack",
+    "prepublishOnly": "npm run prepublishOnly:api && npm run prepublishOnly:ui",
+    "prepublishOnly:api": "npm run prepublishOnly --prefix api",
+    "prepublishOnly:ui": "npm run prepublishOnly --prefix ui",
+    "clean": "npm run clean:api && npm run clean:ui",
+    "clean:api": "npm run clean --prefix api",
+    "clean:ui": "npm run clean --prefix ui",
+    "build": "npm run build:api && npm run build:ui",
+    "build:api": "npm run build --prefix api",
+    "build:ui": "npm run build --prefix ui",
+    "rebuild": "npm run rebuild:api && npm run rebuild:ui",
+    "rebuild:api": "npm run rebuild --prefix api",
+    "rebuild:ui": "npm run rebuild --prefix ui",
+    "start": "npm run start --prefix api",
+    "monitor:api": "npm run monitor --prefix api",
+    "nsp": "npm run nsp:api && npm run nsp:ui",
+    "nsp:api": "npm run nsp --prefix api",
+    "nsp:ui": "npm run nsp --prefix ui",
+    "test": "npm run test:api && npm run test:ui",
+    "test:api": "npm run test --prefix api",
+    "test:ui": "npm run test --prefix ui",
+    "lint": "npm run lint:api && npm run lint:ui",
+    "lint:api": "npm run lint --prefix api",
+    "lint:ui": "npm run lint --prefix ui"
+  },
+  "dependencies": {
+    
+  }
+}

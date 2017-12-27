@@ -1,2 +1,7 @@
 # JetBrains
 .idea
+
+# npm
+package-lock.json
+*.tar.gz
+*.tgz
