@@ -20,11 +20,17 @@
     "test": "nyc mocha -r ts-node/register --recursive './**/*.spec.ts'"
   },
   "nyc": {
+    "check-coverage": true,
+    "per-file": true,
+    "lines": 95,
+    "statements": 95,
+    "functions": 95,
     "extension": [
       ".ts",
       ".tsx"
     ],
     "exclude": [
+      "src/index.ts",
       "**/*.d.ts",
       "**/*.spec.ts",
       "coverage",
@@ -34,7 +40,9 @@
     ],
     "reporter": [
       "html",
-      "text"
+      "text",
+      "text-summary",
+      "lcov"
     ],
     "all": true
   },
