@@ -2,8 +2,8 @@ import { expect } from 'chai';
 import 'mocha';
 import User from './User';
 
-describe('Test the Post object.', () => {
-    describe('Create a new Post instance and test the properties.', () => {
+describe('Test the User object.', () => {
+    describe('Create a new User instance and test the properties.', () => {
         it('returns the values supplied at construction', () => {
             const user = new User({
                 email: 'test@testme.org',

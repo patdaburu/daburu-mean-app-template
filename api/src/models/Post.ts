@@ -28,5 +28,4 @@ const PostSchema: Schema = new Schema({
     }
 });
 
-
 export default model('Post', PostSchema);

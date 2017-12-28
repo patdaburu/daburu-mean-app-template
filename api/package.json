@@ -17,11 +17,11 @@
     "monitor": "./node_modules/nodemon/bin/nodemon.js ./dist/index.js",
     "lint": "./node_modules/tslint/bin/tslint --project .",
     "nsp": "./node_modules/nsp/bin/nsp check",
-    "test": "nyc mocha -r ts-node/register --recursive './**/*.spec.ts'"
+    "test": "npm run clean:coverage && nyc mocha  --timeout=12000 -r ts-node/register --recursive './**/*.spec.ts'"
   },
   "nyc": {
-    "check-coverage": true,
-    "per-file": true,
+    "check-coverage": false,
+    "per-file": false,
     "lines": 95,
     "statements": 95,
     "functions": 95,
@@ -67,7 +67,11 @@
     "@types/mocha": "^2.2.44",
     "chai": "^4.1.2",
     "mocha": "^4.0.1",
+    "mockgoose": "^7.3.3",
+    "mockgoose-fix": "^7.3.6",
+    "mongodb-download": "^2.2.3",
     "nodemon": "^1.14.3",
+    "npm-delay": "^1.0.4",
     "nsp": "^3.1.0",
     "nyc": "^11.3.0",
     "source-map-support": "^0.5.0",

@@ -29,7 +29,8 @@
     "lint:api": "npm run lint --prefix api",
     "lint:ui": "npm run lint --prefix ui"
   },
-  "dependencies": {
-    
+  "dependencies": {},
+  "devDependencies": {
+    "mockgoose-fix": "^7.3.6"
   }
 }

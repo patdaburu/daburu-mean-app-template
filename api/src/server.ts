@@ -26,7 +26,7 @@ export class Server {
     public config() {
         // set up mongoose
         const MONGO_URI = 'mongodb://localhost/test';
-        mongoose.connect(MONGO_URI || process.env.MONGODB_URI);
+        mongoose.connect(MONGO_URI || process.env.MONGODB_URI, { useMongoClient: true });
 
         // config
         this.app.use(bodyParser.json());

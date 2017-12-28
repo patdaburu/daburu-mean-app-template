@@ -4,7 +4,7 @@ import Post from '../models/Post';
 // tslint:disable object-literal-sort-keys
 // tslint:disable object-literal-shorthand
 // tslint:disable no-identical-functions
-class PostRouter {
+export class PostRouter {
 
     public router: Router;
 
