@@ -2,6 +2,10 @@
 .idea
 
 # npm
+node_modules
 package-lock.json
 *.tar.gz
 *.tgz
+
+# nyc test coverage
+.nyc_output
